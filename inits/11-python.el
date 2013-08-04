@@ -1,5 +1,3 @@
-(require 'python-mode)
-
 (add-hook 'python-mode-hook
           (lambda ()
             (define-key python-mode-map "\"" 'electric-pair)
