@@ -8,7 +8,7 @@
 (require 'python)
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
-(define-key python-mode-map (kbd "TAB") 'jedi:complete)
+(define-key python-mode-map (kbd "M-TAB") 'jedi:complete)
 ;(setq jedi:complete-on-dot t)
 
 (add-hook 'python-mode-hook
