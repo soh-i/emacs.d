@@ -12,6 +12,9 @@
 
 (show-paren-mode 1)
 
+;; scratch buffer msg is off
+(setq initial-scratch-message "")
+
 ;; Off the menu bar
 (if window-system (menu-bar-mode 1) (menu-bar-mode -1))
 
