@@ -30,4 +30,3 @@
 (setq display-time-string-forms
   '((substring year -2) "/" month "/" day " " dayname " " 24-hours ":" minutes))
 (display-time)
-
