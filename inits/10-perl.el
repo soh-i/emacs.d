@@ -1,18 +1,3 @@
-;; perl-completion
-(add-hook 'cperl-mode-hook
-          (lambda()
-            (require 'perl-completion)
-            (perl-completion-mode t)))
-
-(add-hook  'cperl-mode-hook
-           (lambda ()
-             (when (require 'auto-complete nil t) ; no error whatever auto-complete.el is not installed.
-               (auto-complete-mode t)
-               (make-variable-buffer-local 'ac-sources)
-               (setq ac-sources
-                     '(ac-source-perl-completion)))))
-
-
 ;; perl-tidy
 (defun perltidy-region ()
   "Run perltidy on the current region."
@@ -49,3 +34,9 @@
              (set-face-foreground 'font-lock-string-face "white")
 
 ))
+
+;; perl-completion
+(add-hook 'cperl-mode-hook
+          (lambda()
+            (require 'perl-completion)
+            (add-to-list 'ac-sources 'ac-source-perl-completion)))
