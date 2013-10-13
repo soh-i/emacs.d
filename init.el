@@ -11,6 +11,9 @@
 
 (require 'init-loader)
 (setq init-loader-show-log-after-init nil)
-(init-loader-load "/home/soh.i/.emacs.d/inits")
+(init-loader-load "~/.emacs.d/inits")
 
 (require 'melpa)
+(require 'esup)
+;;(setq gc-cons-threshold 134217728)
+
