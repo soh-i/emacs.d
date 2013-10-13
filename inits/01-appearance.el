@@ -34,3 +34,13 @@
 (setq scroll-conservatively 35
   scroll-margin 0
   scroll-step 1)
+
+
+(require 'cua-rect)
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
+
+(defadvice cua-set-mark (around start-rectangle-mark activate)
+  (if (and (region-active-p) (eq last-command 'cua-set-mark))
+      (cua-toggle-rectangle-mark)
+    ad-do-it))
